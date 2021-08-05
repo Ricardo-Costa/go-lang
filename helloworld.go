@@ -19,10 +19,14 @@ func main() {
 	fmt.Println(res2, err2.Error())
 
 	product := entity.Product{}
-	product.ID = "3m2l1km3k2l1mk"
-	product.Name = "John Silva"
+	product.ID = 123
+	product.Name = "Shirt"
+
+	products := entity.Products{}
+	products.Add(product)
 
 	fmt.Println(product)
+	fmt.Println(products)
 }
 
 func sum(a int, b int) (int, error) {
