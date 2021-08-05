@@ -23,15 +23,16 @@ func main() {
 	product.ID = uuid.NewV4().String()
 	product.Name = "Shirt"
 
-	products := entity.Products{}
-	products.Add(product)
-
 	fmt.Println(product)
-	fmt.Println(products)
 
 	newproduct := entity.NewProduct()
 	newproduct.Name = "Shirt3"
 	fmt.Println(newproduct)
+
+	products := entity.Products{}
+	products.Add(product)
+	products.Add(*newproduct)
+	fmt.Println(products)
 }
 
 func sum(a int, b int) (int, error) {
