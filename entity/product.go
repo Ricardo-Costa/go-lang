@@ -4,7 +4,7 @@ import uuid "github.com/satori/go.uuid"
 
 type Product struct {
 	ID   string
-	Name string
+	Name string `json:"full_name"`
 }
 
 func NewProduct() *Product {
