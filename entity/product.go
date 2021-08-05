@@ -1,8 +1,16 @@
 package entity
 
+import uuid "github.com/satori/go.uuid"
+
 type Product struct {
-	ID   int
+	ID   string
 	Name string
+}
+
+func NewProduct() *Product {
+	return &Product{
+		ID: uuid.NewV4().String(),
+	}
 }
 
 type Products struct {

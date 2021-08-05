@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"github.com/Ricardo-Costa/go-lang/entity"
+	uuid "github.com/satori/go.uuid"
 )
 
 func main() {
@@ -19,7 +20,7 @@ func main() {
 	fmt.Println(res2, err2.Error())
 
 	product := entity.Product{}
-	product.ID = 123
+	product.ID = uuid.NewV4().String()
 	product.Name = "Shirt"
 
 	products := entity.Products{}
@@ -27,6 +28,10 @@ func main() {
 
 	fmt.Println(product)
 	fmt.Println(products)
+
+	newproduct := entity.NewProduct()
+	newproduct.Name = "Shirt3"
+	fmt.Println(newproduct)
 }
 
 func sum(a int, b int) (int, error) {
