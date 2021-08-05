@@ -1,0 +1,6 @@
+# Go GET
+- go get github.com/***
+
+# CLI
+- sudo apt install cobra
+- cobra init --pkg-name=github.com/Ricardo-Costa/go-lang
