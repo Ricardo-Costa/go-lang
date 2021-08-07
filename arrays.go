@@ -7,6 +7,7 @@ func main() {
 	var x [10]int
 
 	x[9] = 123
+	fmt.Println(len(x))
 
 	z := [5]int { 1, 23, 4, 54, 6 }
 
